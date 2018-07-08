@@ -16,7 +16,7 @@ namespace HWMyMoney.Models
             {
                 var fakeData = new Ledger
                 {
-                    Category = random.Next(1, 100) % i == 0? CategoryType.Expenditure : CategoryType.Income,
+                    Category = random.Next(1, 100) % i == 0 ? CategoryType.Expenditure : CategoryType.Income,
                     Money = random.Next(0, 100000),
                     Date = DateTime.Now.AddDays(-random.Next(0, 100)).AddMinutes(random.Next(0, 60)),
                     Memo = $"fake memo {i}"
