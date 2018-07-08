@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using HWMyMoney.Models;
 using System.Web.Mvc;
 
 namespace HWMyMoney.Controllers
@@ -11,7 +8,7 @@ namespace HWMyMoney.Controllers
         // GET: Ledger
         public ActionResult Index()
         {
-            return View();
+            return View(new LedgerViewModel());
         }
     }
 }
