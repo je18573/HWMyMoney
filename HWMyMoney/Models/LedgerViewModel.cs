@@ -1,5 +1,6 @@
 ﻿using HWMyMoney.Models.Enum;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace HWMyMoney.Models
 {
@@ -16,11 +17,13 @@ namespace HWMyMoney.Models
         /// <summary>
         /// 金額
         /// </summary>
+        [DisplayFormat(DataFormatString = "{0:n0}")]
         public decimal Money { get; set; }
 
         /// <summary>
         /// 日期
         /// </summary>
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime Date { get; set; }
 
         /// <summary>

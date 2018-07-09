@@ -18,8 +18,8 @@
                 <tr>
                     <td>@index</td>
                     <td>@(data.Category.GetDisplayName())</td>
-                    <td>@data.Date</td>
-                    <td>@data.Money</td>
+                    <td>@Html.DisplayFor(x => data.Date)</td>
+                    <td>@Html.DisplayFor(x => data.Money)</td>
                 </tr>
                 index++;
             }
