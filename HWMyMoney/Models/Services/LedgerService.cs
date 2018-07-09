@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using HWMyMoney.Models.Enum;
 
-namespace HWMyMoney.Models
+namespace HWMyMoney.Models.Services
 {
-    public class LedgerService
+    public class LedgerService : ILedgerService
     {
-      
         public IEnumerable<LedgerViewModel> LookupAllData()
         {
             var random   = new Random();
