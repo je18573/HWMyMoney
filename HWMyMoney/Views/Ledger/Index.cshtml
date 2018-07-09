@@ -1,4 +1,4 @@
-﻿@model HWMyMoney.Models.LedgerViewModel
+﻿@model IEnumerable<HWMyMoney.Models.LedgerViewModel>
 @{
     ViewBag.Title = "Ledger Index";
 }
@@ -42,4 +42,4 @@
     </form>
 </div>
 
-@Html.Partial("_LedgerList", Model)
+@Html.Partial("_LedgerList")

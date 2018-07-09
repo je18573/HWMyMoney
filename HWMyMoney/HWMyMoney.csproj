@@ -155,8 +155,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Enum\CategoryType.cs" />
-    <Compile Include="Models\Ledger.cs" />
     <Compile Include="Models\LedgerViewModel.cs" />
+    <Compile Include="Models\LedgerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
