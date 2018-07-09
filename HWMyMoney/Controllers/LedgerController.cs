@@ -8,7 +8,8 @@ namespace HWMyMoney.Controllers
         // GET: Ledger
         public ActionResult Index()
         {
-            return View(new LedgerViewModel());
+            var source = new LedgerService().LookupAllData();
+            return View(source);
         }
     }
 }

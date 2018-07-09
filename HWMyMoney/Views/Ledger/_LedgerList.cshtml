@@ -1,5 +1,5 @@
 ﻿@using HWMyMoney.Extension
-@model HWMyMoney.Models.LedgerViewModel
+@model IEnumerable<HWMyMoney.Models.LedgerViewModel>
 
 <div class="row">
     <div class="col-md-12">
@@ -13,7 +13,7 @@
             @{
                 var index = 1;
             }
-            @foreach (var data in Model.LedgerList)
+            @foreach (var data in Model)
             {
                 <tr>
                     <td>@index</td>

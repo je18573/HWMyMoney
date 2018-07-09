@@ -1,33 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using HWMyMoney.Models.Enum;
+﻿using HWMyMoney.Models.Enum;
+using System;
 
 namespace HWMyMoney.Models
 {
+    /// <summary>
+    /// 記帳本
+    /// </summary>
     public class LedgerViewModel
     {
-        public LedgerViewModel()
-        {
-            #region ===產生假資料===
-            var fakeList = new List<Ledger>();
-            var random = new Random();
+        /// <summary>
+        /// 類別
+        /// </summary>
+        public CategoryType Category { get; set; }
 
-            for (var i = 1; i <= 50; i++)
-            {
-                var fakeData = new Ledger
-                {
-                    Category = random.Next(1, 100) % i == 0 ? CategoryType.Expenditure : CategoryType.Income,
-                    Money = random.Next(0, 100000),
-                    Date = DateTime.Now.AddDays(-random.Next(0, 100)).AddMinutes(random.Next(0, 60)),
-                    Memo = $"fake memo {i}"
-                };
-                fakeList.Add(fakeData);
-            }
-            #endregion
+        /// <summary>
+        /// 金額
+        /// </summary>
+        public decimal Money { get; set; }
 
-            LedgerList = fakeList;
-        }
+        /// <summary>
+        /// 日期
+        /// </summary>
+        public DateTime Date { get; set; }
 
-        public List<Ledger> LedgerList { get; set; }
+        /// <summary>
+        /// 備註
+        /// </summary>
+        public string Memo { get; set; }
     }
 }
